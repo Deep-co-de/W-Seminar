@@ -1,0 +1,76 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nty/global/}
+  \entry{green-it}{book}{}
+    \name{editor}{1}{}{%
+      {{hash=LF}{%
+         family={Lampe},
+         familyi={L\bibinitperiod},
+         given={Frank},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Vieweg+Teubner Verlag}%
+    }
+    \strng{namehash}{LF1}
+    \strng{fullhash}{LF1}
+    \field{labelnamesource}{editor}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{edition}{1}
+    \field{pagetotal}{196}
+    \field{subtitle}{Mit neuen IT-Technologien Energieeffizienz erreichen, die
+  Umwelt schonen und Kosten sparen}
+    \field{title}{Green-IT, Virtualisierung und Thin Clients}
+    \list{location}{1}{%
+      {Wiesbaden}%
+    }
+    \field{year}{2010}
+  \endentry
+
+  \entry{tiny-core}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=SR}{%
+         family={Shingledecker},
+         familyi={S\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SR1}
+    \strng{fullhash}{SR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2023}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Tiny Core Linux}
+    \verb{url}
+    \verb http://tinycorelinux.net/downloads.html
+    \endverb
+    \field{year}{2023}
+    \field{urlday}{21}
+    \field{urlmonth}{07}
+    \field{urlyear}{2023}
+  \endentry
+\endsortlist
+\endinput

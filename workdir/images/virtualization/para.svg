@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="full.svg"
+   inkscape:export-filename="partitionierung.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showguides="true"
+     inkscape:zoom="1.0690236"
+     inkscape:cx="408.78424"
+     inkscape:cy="378.85038"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     inkscape:window-x="2560"
+     inkscape:window-y="815"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <rect
+       x="396.85038"
+       y="37.417323"
+       width="90.510247"
+       height="36.48189"
+       id="rect4" />
+    <rect
+       x="226.36704"
+       y="155.23393"
+       width="143.63387"
+       height="30.267632"
+       id="rect7" />
+    <rect
+       x="237.85418"
+       y="439.8061"
+       width="144.41593"
+       height="34.702261"
+       id="rect2" />
+    <rect
+       x="237.85419"
+       y="439.80609"
+       width="144.41592"
+       height="34.702263"
+       id="rect2-7" />
+    <rect
+       x="237.85419"
+       y="439.80609"
+       width="204.13405"
+       height="35.079428"
+       id="rect2-7-9" />
+    <rect
+       x="237.85419"
+       y="439.80609"
+       width="159.60734"
+       height="36.493768"
+       id="rect2-7-9-6" />
+    <rect
+       x="237.85419"
+       y="439.80609"
+       width="204.13405"
+       height="35.07943"
+       id="rect2-7-9-3" />
+    <rect
+       x="237.85419"
+       y="439.80609"
+       width="159.60735"
+       height="36.493767"
+       id="rect2-7-9-6-2" />
+    <rect
+       x="237.85419"
+       y="439.80609"
+       width="159.60735"
+       height="36.493767"
+       id="rect2-7-9-6-2-3" />
+    <rect
+       x="237.85419"
+       y="439.80609"
+       width="204.13405"
+       height="35.07943"
+       id="rect2-7-9-3-2" />
+    <rect
+       x="226.36703"
+       y="155.23393"
+       width="143.63387"
+       height="30.267632"
+       id="rect7-0" />
+    <rect
+       x="237.85419"
+       y="439.80609"
+       width="204.13405"
+       height="35.07943"
+       id="rect2-7-9-3-7" />
+    <rect
+       x="237.85419"
+       y="439.80609"
+       width="204.13405"
+       height="35.07943"
+       id="rect2-7-9-3-7-0" />
+    <rect
+       x="237.85419"
+       y="439.80609"
+       width="236.39531"
+       height="35.07943"
+       id="rect2-7-9-3-7-9" />
+    <rect
+       x="237.85419"
+       y="439.80609"
+       width="247.22016"
+       height="28.14969"
+       id="rect2-7-9-6-2-1" />
+    <rect
+       x="237.85419"
+       y="439.80609"
+       width="222.18793"
+       height="36.493767"
+       id="rect2-7-9-6-2-6" />
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2"
+       inkscape:label="hardware"
+       inkscape:export-filename="partisierung.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <rect
+         style="fill:#000000;stroke:#000000;stroke-width:0.843295;stroke-dasharray:none;stroke-opacity:1;fill-opacity:0.2900584"
+         id="rect1"
+         width="131.10596"
+         height="12.935956"
+         x="39.447021"
+         y="115.75719"
+         ry="3.5618305" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,22.800608,1.4780982)"
+         id="text1"
+         style="font-size:26.6667px;white-space:pre;shape-inside:url(#rect2);shape-padding:2.29747;display:inline;fill:none;stroke:#000000;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1"
+         x="59.546734"
+         y="0"><tspan
+           x="248.54147"
+           y="466.36688"
+           id="tspan9"><tspan
+             style="text-align:center;text-anchor:middle;fill:#000000;stroke:none"
+             id="tspan4">Hardware</tspan></tspan></text>
+    </g>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.772327;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1-5-2-7-7"
+       width="55.465"
+       height="25.64748"
+       x="39.411537"
+       y="52.665581"
+       ry="2.660872" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.556168;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1-5-2-7-7-5"
+       width="55.68116"
+       height="13.24845"
+       x="39.303455"
+       y="81.55619"
+       ry="1.3744988" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.23729407,0,0,0.23729407,-7.5791856,-43.122088)"
+       id="text1-6-6-9-3"
+       style="font-size:26.6667px;white-space:pre;shape-inside:url(#rect2-7-9-6-2);shape-padding:2.29747;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1"
+       x="59.546734"
+       y="0"><tspan
+         x="240.15039"
+         y="466.36688"
+         id="tspan10">Anwendung</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.23729407,0,0,0.23729407,-12.553723,-20.84044)"
+       id="text1-6-6-9-3-9"
+       style="font-size:26.6667px;white-space:pre;shape-inside:url(#rect2-7-9-6-2-6);shape-padding:2.29747;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1"
+       x="59.546734"
+       y="0"><tspan
+         x="240.15039"
+         y="466.36688"
+         id="tspan11">Betriebssystem</tspan></text>
+    <g
+       id="g7"
+       inkscape:label="betriebssystem"
+       transform="translate(0,1.0583333)">
+      <text
+         xml:space="preserve"
+         transform="matrix(0.23729407,0,0,0.23729407,32.082912,-5.1802242)"
+         id="text1-6-6-5"
+         style="font-size:26.6667px;white-space:pre;shape-inside:url(#rect2-7-9-3);shape-padding:2.29747;display:inline;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1"
+         x="59.546734"
+         y="0"
+         inkscape:label="text1-6-6"><tspan
+           x="240.15039"
+           y="466.36688"
+           id="tspan12">Hypervisor</tspan></text>
+      <rect
+         style="fill:#ff0000;fill-opacity:0.202128;stroke:#fe0000;stroke-width:0.797349;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1-5"
+         width="131.1519"
+         height="11.560702"
+         x="39.424049"
+         y="98.06028"
+         ry="3.1831636" />
+    </g>
+    <g
+       id="g9"
+       style="fill:#ff0101;fill-opacity:0.247216;stroke:#ff0101;stroke-opacity:1"
+       inkscape:label="emuliertes system"
+       transform="translate(0,16.933338)">
+      <rect
+         style="fill:#ff0101;fill-opacity:0.247216;stroke:#ff0101;stroke-width:1.07447;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1-5-2-7-7-2"
+         width="64.900162"
+         height="42.42284"
+         x="105.53723"
+         y="35.739151"
+         ry="5.9342275" />
+      <g
+         id="g8"
+         inkscape:label="guest os"
+         style="fill:#ff0101;fill-opacity:0.247216;stroke:#ff0101;stroke-opacity:1">
+        <text
+           xml:space="preserve"
+           transform="matrix(0.23729407,0,0,0.23729407,57.9008,-38.244504)"
+           id="text1-6-6-5-3"
+           style="font-size:20.8134px;white-space:pre;shape-inside:url(#rect2-7-9-3-7);shape-padding:2.29747;display:inline;fill:#ff0101;fill-opacity:1;stroke:none;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1"
+           x="59.546734"
+           y="0"
+           inkscape:label="text1-6-6"><tspan
+             x="240.15039"
+             y="461.04111"
+             id="tspan13">Gastbetriebssystem</tspan></text>
+        <rect
+           style="fill:#ff0101;fill-opacity:0.247216;stroke:#ff0101;stroke-width:0.535186;stroke-dasharray:none;stroke-opacity:1"
+           id="rect1-5-7"
+           width="57.776188"
+           height="11.822865"
+           x="108.97965"
+           y="63.962273"
+           ry="3.2553484" />
+      </g>
+      <g
+         id="g8-8"
+         inkscape:label="anwendung"
+         transform="translate(0,-13.416385)"
+         style="fill:#ff0101;fill-opacity:0.247216;stroke:#ff0101;stroke-opacity:1">
+        <text
+           xml:space="preserve"
+           transform="matrix(0.23729407,0,0,0.23729407,67.03776,-38.465784)"
+           id="text1-6-6-5-3-9"
+           style="font-size:20.8134px;white-space:pre;shape-inside:url(#rect2-7-9-3-7-0);shape-padding:2.29747;display:inline;fill:#ff0101;fill-opacity:1;stroke:none;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1"
+           x="59.546734"
+           y="0"
+           inkscape:label="text1-6-6"><tspan
+             x="240.15039"
+             y="461.04111"
+             id="tspan14">Anwendung</tspan></text>
+        <rect
+           style="fill:#ff0101;fill-opacity:0.247216;stroke:#ff0101;stroke-width:0.535186;stroke-dasharray:none;stroke-opacity:1"
+           id="rect1-5-7-6"
+           width="57.776188"
+           height="11.822865"
+           x="108.97965"
+           y="63.962273"
+           ry="3.2553484" />
+      </g>
+      <text
+         xml:space="preserve"
+         transform="matrix(0.23729407,0,0,0.23729407,59.673869,-64.383888)"
+         id="text1-6-6-5-3-0"
+         style="font-size:20.8134px;white-space:pre;shape-inside:url(#rect2-7-9-3-7-9);shape-padding:2.29747;display:inline;fill:#ff0101;fill-opacity:1;stroke:none;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1"
+         x="59.546734"
+         y="0"
+         inkscape:label="text1-6-6"><tspan
+           x="240.15039"
+           y="461.04111"
+           id="tspan15">Virtuelle Maschine</tspan></text>
+    </g>
+  </g>
+</svg>

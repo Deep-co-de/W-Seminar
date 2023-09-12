@@ -1,0 +1,29 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {ngerman}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Digitalisierung der Welt}{3}{section.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Energieeffizienz im Remoteoffice}{4}{section.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Neuronale Netze}{6}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Entertainment}{7}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Rficient(c)}{8}{section.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Geld / Gruen}{9}{section.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Intelligente Systeme}{10}{section.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Einigungsalgorithmen}{11}{section.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Schluss}{12}{section.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {10}Anhang}{13}{section.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11}Abkuerzungsverzeichnis}{14}{section.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12}Literaturverzeichnis}{16}{section.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {13}Eidesstattliche Erklaerung}{17}{section.13}

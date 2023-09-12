@@ -1,0 +1,424 @@
+\ProvidesFile{zitieren-all.cbx}[2023/09/12 v1.0 w-seminar energie]
+
+% This file is based on biblatex bibliography drivers and macroses
+% Modified by P. Deininger
+
+% Anmerkung zu year/date entweder 'year = {2016}' oder 'date = {2016}' NICHT: 'date = {26.01.2016}'
+% Anmerkung zu location aktuell erscheint kein Komma nach o.O., wenn es automatisch generiet wird, deshalb als workaround immer 'location = {o.O.}' anstatt ohne location
+
+% =========================== article ===== \citearticle ==== \citearticleinline ==========================================
+% Artikel einer Zeitschrift                                                                                               %
+% Pflicht:  author, title, journaltitle, year/date                                                                        %
+% Wahl:     editor, series, volume, number, (url)                                                                         %
+% =========================================================================================================================
+
+% =========================== book ==== \citebook ==== \citebookinline ====================================================
+% Buch                                                                                                                    %
+% Pflicht:  author, title, year/date                                                                                      %
+% Wahl:     editor, (url)                                                                                                 %
+% =========================================================================================================================
+
+% =========================== collection ==== \citecollection ==== \citecollectioninline ==================================
+% Buch das mehrere fuer sich eigenstaendige "Artikel" mit eigenem Autor enthaelt, Herausgeber wird verpflichtend erwartet %
+% Pflicht:  editor, title, year/date                                                                                      %
+% Wahl:     (url)                                                                                                         %
+% =========================================================================================================================
+
+% =========================== incollection ================================================================================
+% "Artikel" in einer 'collection'                                                                                         %
+% Pflicht:  editor, title, year/date                                                                                      %
+% Wahl:     (url)                                                                                                         %
+% =========================================================================================================================
+
+% =========================== online ==== \citeonline ==== \citeonlineinline ==============================================
+% jegliche Onlinequelle                                                                                                   %
+% Pflicht: url, author, title, year/date                                                                                  %
+% =========================================================================================================================
+
+% =========================== image =======================================================================================
+% Bild                                                                                                                    %
+% =========================================================================================================================
+
+
+
+
+
+
+
+\ExecuteBibliographyOptions{labeldateparts,uniquename,uniquelist,autocite=inline,pagetracker=true,citetracker=true}
+
+
+% ++++++++++++++++ Authoren ++++++++++++++++ %
+\DeclareNameFormat{author}{\namepartfamily%
+  \ifdefvoid{\namepartgiven}{}{%
+  \addcomma\space\namepartgiveni}%
+  % At end of list?
+  \ifthenelse{\value{listcount}<\value{liststop}}%
+  {\addcomma\space}%
+  % Because of comma before u. a.
+  {\addcomma\space}%
+  \usebibmacro{name:andothers}}%
+
+% ++++++++++++++++ Felder ++++++++++++++++ %
+\DeclareFieldFormat*{title}{#1}%
+\DeclareFieldFormat*{editor}{#1}%
+\DeclareFieldFormat*{journaltitle}{#1}%
+\DeclareFieldFormat*{urldate}{#1}%
+\urlstyle{rm}%
+\DeclareFieldFormat*{url}{\url{#1}}%
+\renewbibmacro*{in:}{\printtext{in:\space}}%
+
+
+
+
+% =========================== article ===== \citearticle ==== \citearticleinline ==========================================
+% Artikel einer Zeitschrift                                                                                               %
+% Pflicht:  author, title, journaltitle, year/date                                                                        %
+% Wahl:     editor, series, volume, number, (url)                                                                         %
+% =========================================================================================================================
+
+\newbibmacro{cite:article}{%
+    \ifnameundef{author}{%
+        \blx@error{bibmacro 'cite:complete' kein Autor gefunden.\MessageBreak%
+        Bitte ueberpruefe deine .bib-Dateien auf ein Feld 'author'.\MessageBreak%
+        Vertippt?}%
+    }{%
+    \printnames{author}%
+    }%
+    \newunit\newblock%
+    \iffieldundef{title}{%
+        \blx@error{bibmacro 'cite:complete' kein Titel gefunden.\MessageBreak
+        Bitte ueberpruefe deine .bib-Dateien auf ein Feld 'title'.\MessageBreak
+        Vertippt?}%
+    }{%
+    \addcomma\space%
+    \printfield{title}%
+    }%
+    \newunit\newblock%
+    \iffieldundef{journaltitle}{%
+        \blx@error{bibmacro 'cite:complete' kein Journaltitel gefunden.\MessageBreak%
+        Bitte ueberpruefe deine .bib-Dateien auf ein Feld 'journaltitle'.\MessageBreak%
+        Vertippt?}%
+    }{%
+        \addcomma\space%
+        \usebibmacro{in:}%
+        \printfield{journaltitle}%
+    }%
+    \newunit\newblock%
+    \iflistundef{location}{%
+        \addcomma\space%
+        \printtext{o.O.}%
+        % \blx@error{bibmacro 'cite:complete' kein Ort gefunden.\MessageBreak
+        % Bitte ueberpruefe deine .bib-Dateien auf ein Feld 'location'.\MessageBreak
+        % Momentan sollte fuer 'kein Ort' 'o.O.' als Ort angegeben werden.\MessageBreak
+        % Also 'location = {o.O.}'}%
+    }{%
+        \addcomma\space%
+        \printlist{location}%
+    }%
+    \newunit\newblock%
+    \iffieldundef{year}{%
+        \blx@error{bibmacro 'cite:complete' kein Jahr gefunden.\MessageBreak%
+        Bitte ueberpruefe deine .bib-Dateien auf ein Feld 'date' oder 'year'.\MessageBreak%
+        Vertippt?}%
+    }{%
+        \addcomma\space%
+        \printfield{year}%
+    }%
+    \iffieldundef{url}{}{%
+        \addcomma\space%
+        \printfield{url}%
+        \ifboolexpr {%
+            test {\iffieldundef{urlyear}}%
+            or%
+            test {\iffieldundef{urlmonth}}%
+            or%
+            test {\iffieldundef{urlday}}%
+        }{%
+            blx@error{bibmacro 'cite:complete' kein Abrufdatum gefunden.\MessageBreak%
+            Bitte ueberpruefe deine .bib-Dateien auf ein Feld 'urldate'.\MessageBreak%
+            Vertippt?}%
+        }{%
+            \addcomma\space%
+            \newunit%
+            \printtext{abgerufen am:\space}%
+            % \printfield{urlday}
+            % \printtext{.}
+            % \printfield{urlmonth}
+            % \printtext{.}
+            % \printfield{urlyear}
+            \usebibmacro{urldate}%
+        }%
+    }%
+  }%
+
+\newbibmacro{cite:short-article}{%
+    \ifnameundef{author}{%
+        \blx@error{bibmacro 'cite:complete' kein Autor gefunden.\MessageBreak%
+        Bitte ueberpruefe deine .bib-Dateien auf ein Feld 'author'.\MessageBreak%
+        Vertippt?}%
+    }{%
+    \printnames{author}%
+    }%
+    \newunit\newblock%
+    \iffieldundef{year}{%
+        \blx@error{bibmacro 'cite:complete' kein Jahr gefunden.\MessageBreak%
+        Bitte ueberpruefe deine .bib-Dateien auf ein Feld 'date' oder 'year'.\MessageBreak%
+        Vertippt?}%
+    }{%
+        \addcomma\space%
+        \printfield{year}%
+    }%
+  }%
+
+
+\DeclareCiteCommand{\citearticle}[\mkbibfootnote]%
+  {\usebibmacro{prenote}}%
+  {\usebibmacro{citeindex}%
+    \ifciteseen{%
+       \ifsamepage{\value{instcount}}{\value{instcount}-1}%
+         {\usebibmacro{cite:short-article}}%   % already seen
+         {\usebibmacro{cite:article}}%   % seen but not on this page
+    }%
+    {\usebibmacro{cite:article}}%        % never seen
+  }%
+  {\multicitedelim}%
+  {\usebibmacro{postnote}}%
+
+
+
+\DeclareCiteCommand{\citearticleinline}[]%
+  {\usebibmacro{prenote}}%
+  {\usebibmacro{citeindex}%
+    \ifciteseen{%
+       \ifsamepage{\value{instcount}}{\value{instcount}-1}%
+         {\usebibmacro{cite:short-article}}%   % already seen
+         {\usebibmacro{cite:article}}%   % seen but not on this page
+    }%
+    {\usebibmacro{cite:article}}%        % never seen
+  }%
+  {\multicitedelim}%
+  {\usebibmacro{postnote}}%
+
+
+
+
+
+% =========================== book ========================================================================================
+% Buch                                                                                                                    %
+% Pflicht:  author, title, year/date                                                                                      %
+% Wahl:     editor, (url)                                                                                                 %
+% =========================================================================================================================
+
+\newbibmacro{cite:book}{%
+    \ifnameundef{author}{%
+        \ifnameundef{editor}{%
+            \blx@warning{bibmacro 'cite:complete' kein Autor oder Editor gefunden.\MessageBreak
+        Bitte ueberpruefe deine .bib-Dateien auf ein Feld 'author'/'editor'.\MessageBreak
+        Vertippt?}%
+        }{%
+            \printnames{editor}%
+            \space%
+            \printtext{(Ed. \addcomma)},%
+        }%
+    }{%
+        \printnames{author}%
+    }%
+    \newunit\newblock%
+    \iffieldundef{title}{%
+        \blx@error{bibmacro 'cite:complete' kein Titel gefunden.\MessageBreak
+        Bitte ueberpruefe deine .bib-Dateien auf ein Feld 'title'.\MessageBreak
+        Vertippt?}%
+    }{%
+    \addcomma\space%
+    \printfield{title}%
+    }%
+    \newunit\newblock%
+    \iflistundef{location}{%
+        \addcomma\space%
+        \printtext{o.O.}%
+        % \blx@error{bibmacro 'cite:complete' kein Ort gefunden.\MessageBreak
+        % Bitte ueberpruefe deine .bib-Dateien auf ein Feld 'location'.\MessageBreak
+        % Momentan sollte fuer 'kein Ort' 'o.O.' als Ort angegeben werden.\MessageBreak
+        % Also 'location = {o.O.}'}%
+    }{%
+        \addcomma\space%
+        \printlist{location}%
+    }%
+    \newunit\newblock%
+    \iffieldundef{year}{%
+        \blx@error{bibmacro 'cite:complete' kein Jahr gefunden.\MessageBreak
+        Bitte ueberpruefe deine .bib-Dateien auf ein Feld 'date' oder 'year'.\MessageBreak
+        Vertippt?}%
+    }{%
+        \addcomma\space%
+        \printfield{year}%
+    }%
+}
+
+
+\DeclareCiteCommand{\citebook}[\mkbibfootnote]%
+  {\usebibmacro{prenote}}%
+  {\usebibmacro{citeindex}%
+    \ifciteseen{%
+       \ifsamepage{\value{instcount}}{\value{instcount}-1}%
+         {\usebibmacro{cite:short-book}}%   % already seen
+         {\usebibmacro{cite:book}}%  % seen but not on this page
+    }%
+    {\usebibmacro{cite:book}}%        % never seen
+  }%
+  {\multicitedelim}%
+  {\usebibmacro{postnote}}%
+
+\DeclareCiteCommand{\citebookinline}[]%
+  {\usebibmacro{prenote}}%
+  {\usebibmacro{citeindex}%
+    \ifciteseen{%
+       \ifsamepage{\value{instcount}}{\value{instcount}-1}%
+         {\usebibmacro{cite:short-article}}%   % already seen
+         {\usebibmacro{cite:article}}%   % seen but not on this page
+    }
+    {\usebibmacro{cite:book}}%        % never seen
+  }%
+  {\multicitedelim}%
+  {\usebibmacro{postnote}}%
+
+
+
+% =========================== collection ==== \citecollection ==== \citecollectioninline ==================================
+% Buch das mehrere fuer sich eigenstaendige "Artikel" mit eigenem Autor enthaelt, Herausgeber wird verpflichtend erwartet %
+% Pflicht:  editor, title, year/date                                                                                      %
+% Wahl:     (url)                                                                                                         %
+% =========================================================================================================================
+
+
+% Keine Besonderheiten bekannt deshalb, wie 'book'
+\newcommand{\citecollection}{\citebook}
+\newcommand{\citecollectioninline}{\citebookinline}
+
+
+% =========================== incollection ================================================================================
+% "Artikel" in einer 'collection'                                                                                         %
+% Pflicht:  editor, title, year/date                                                                                      %
+% Wahl:     (url)                                                                                                         %
+% =========================================================================================================================
+
+
+% Keine Besonderheiten bekannt deshalb, wie 'book'
+\newcommand{\citeincollection}{\citebook}
+\newcommand{\citeincollectioninline}{\citebookinline}
+
+
+% =========================== online ======================================================================================
+% jegliche Onlinequelle                                                                                                   %
+% Pflicht: url, author, title, year/date                                                                                  %
+% =========================================================================================================================
+
+\newbibmacro{cite:url}{%
+  \ifnameundef{author}{%
+        \blx@error{bibmacro 'cite:complete' kein Autor gefunden.\MessageBreak%
+        Bitte ueberpruefe deine .bib-Dateien auf ein Feld 'author'.\MessageBreak%
+        Vertippt?}%
+    }{%
+    \printnames{author}%
+    }%
+  \newunit\newblock%
+  \iffieldundef{title}{%
+      \blx@error{bibmacro 'cite:complete' kein Titel gefunden.\MessageBreak
+      Bitte ueberpruefe deine .bib-Dateien auf ein Feld 'title'.\MessageBreak
+      Vertippt?}%
+  }{%
+  \addcomma\space%
+  \printfield{title}%
+  }%
+  \newunit\newblock%
+  \iffieldundef{year}{%
+      \blx@error{bibmacro 'cite:complete' kein Jahr gefunden.\MessageBreak
+      Bitte ueberpruefe deine .bib-Dateien auf ein Feld 'date' oder 'year'.\MessageBreak
+      Vertippt?}%
+  }{%
+      \addcomma\space%
+      \printfield{year}%
+  }%
+  \iffieldundef{url}{}{%
+  \addcomma\space%
+  \printfield{url}%
+  \ifboolexpr {%
+      test {\iffieldundef{urlyear}}%
+      or%
+      test {\iffieldundef{urlmonth}}%
+      or%
+      test {\iffieldundef{urlday}}%
+  }{%
+      blx@error{bibmacro 'cite:complete' kein Abrufdatum gefunden.\MessageBreak%
+      Bitte ueberpruefe deine .bib-Dateien auf ein Feld 'urldate'.\MessageBreak%
+      Vertippt?}%
+  }{%
+      \addcomma\space%
+      \newunit%
+      \printtext{abgerufen am:\space}%
+      % \printfield{urlday}
+      % \printtext{.}
+      % \printfield{urlmonth}
+      % \printtext{.}
+      % \printfield{urlyear}
+      \usebibmacro{urldate}%
+  }%
+}%
+}
+
+
+\DeclareCiteCommand{\citeurl}[\mkbibfootnote]%
+{\usebibmacro{prenote}}%
+{\usebibmacro{citeindex}%
+  \ifciteseen{%
+     \ifsamepage{\value{instcount}}{\value{instcount}-1}%
+       {\usebibmacro{cite:short-url}}%   % already seen
+       {\usebibmacro{cite:url}}%  % seen but not on this page
+  }%
+  {\usebibmacro{cite:url}}%        % never seen
+}%
+{\multicitedelim}%
+{\usebibmacro{postnote}}%
+
+\DeclareCiteCommand{\citeurlinline}[]%
+{\usebibmacro{prenote}}%
+{\usebibmacro{citeindex}%
+  \ifciteseen{%
+     \ifsamepage{\value{instcount}}{\value{instcount}-1}%
+       {\usebibmacro{cite:short-url}}%   % already seen
+       {\usebibmacro{cite:url}}%   % seen but not on this page
+  }
+  {\usebibmacro{cite:url}}%        % never seen
+}%
+{\multicitedelim}%
+{\usebibmacro{postnote}}%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% Vermutlich nicht benótigt
+
+  \DeclareCiteCommand{\footcitecomplete}[\mkbibfootnote]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   %\usebibmacro{cite:article}
+   }
+  {\multicitedelim}
+  {\usebibmacro{postnote}}

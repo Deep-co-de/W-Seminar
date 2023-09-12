@@ -1,0 +1,81 @@
+\newglossaryentry{latex}
+{
+    name=latex,
+    description={Is a markup language specially suited 
+    for scientific documents}
+}
+\newglossaryentry{ex}{name={sample},description={an example}}
+
+
+
+\newglossaryentry{host-os}
+{
+    name={Host-Betriebssystem},
+    description={Das Host Betriebsysstem ist die Desktopumgebung, welche ein Benutzer beim Hochfahren eines konventionellen Computers vorfindet.}
+}
+\newglossaryentry{virt-machine}
+{
+    name={Virtuelle Maschinen},
+    description={Eine virtuelle Maschine stellt einen eigenständigen Computer dar, welcher sich jedoch die Hardware mit anderen teilt. Ein Spezialfall stellen Container dar: Diese teilen sich sowohl Hardware als auch \gls{kernel} eines übergeordneten Computers. Dieser kann eine Virtuelle Maschine oder auch Container sein. Diese Verschachtelung lässt sich bis zu einem bestimmten Grad immer mit ein wenig Performanceeinbußen fortführen.}
+}
+\newglossaryentry{kernel}
+{
+    name={Kernel},
+    description={TODO}
+}
+\newglossaryentry{system-calls}
+{
+    name={SystemCalls},
+    description={Befehle des Betriebssystems direkt an die Hardware}
+}
+\newglossaryentry{android-emul}
+{
+    name={Android Emulator},
+    description={Software, die den Platinenaufbau eines Handyprozessors nachbildet und zur Ausführung des Handybetriebssystems verwendet. Kann meist durch eine "normale" \gls{virt-machine} ersetzt werden, da es inzwischen auch Handys mit den Computerprozessoren ähnlichen Prozessoren gibt.}
+}
+\newglossaryentry{rechenzentrum}
+{
+    name={Rechenzentrum},
+    plural={Rechenzentren},
+    description={Bereitstellung von Rechenkapazität durch mehrere physische Computer. Diese können durch Virtualisierung nach außen als eine andere Zahl von Computern erscheinen - entweder durch Zusammenschluss oder Aufteilung.}
+}
+\newglossaryentry{disp-vm}
+{
+    name={Disposable \gls{vm}},
+    description={Eine sogenannte Disposable Virtual Machine stellt einen Computer dar, welcher sich keine Änderungen merkt. Bei jedem Hochfahren wird man mit derselben Umgebung empfangen, dies hat vor allem sicherheitstechnisch einige Vorteile: Zum Beispiel kann keine Schadsoftware dauerhaft installiert werden.}
+}
+
+\newglossaryentry{copy-on-write}
+{
+    name={Copy-on-Write},
+    description={Hierbei werden zum Beispiel beim Kopieren einer Datei nicht der Inhalt der Datei kopiert sondern nur die Information, dass diese Datei kopiert wurde. Bei Änderungen an einer der beiden Dateien, werden dann nur die Änderungen zum Ursprung als Information für die bearbeitete Datei gespeichert. Um diese Funktion zu realisieren, gibt es spezielle Dateisysteme.}
+}
+\newglossaryentry{remote-pc}
+{
+    name={Remote Computer},
+    description={Ein eventuell entfernter Computer wird durch ein Fenster, welches einen virtuellen Bildschirm darstellt, ähnlich wie mit einem Thin Client bedient.}
+}
+\newglossaryentry{load-balancing}
+{
+    name={Load Balancing},
+    description={Unter diesem Begriff werden mehrere Techniken zur dynamischen Aufteilung von Ressourcen zusammengefasst: TODO}
+}
+\newglossaryentry{driver}
+{
+    name={Treiber},
+    description={Software zur Kommunikation mit bestimmter Hardware.}
+}
+\newglossaryentry{cnn}
+{
+    name={Convolutional Neuronal Network},
+    description={}
+}
+\newglossaryentry{blockchain}
+{
+    name={Blockchain},
+    description={}
+}
+
+\newabbreviation{vm}{VM}{\gls{vm}}
+\newabbreviation{bcnn}{BCNN}{\gls{bcnn}}
+
